@@ -1,12 +1,14 @@
 <div class="app-container">
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+  <mat-toolbar color="primary">
+    <span>User List Application</span>
+  </mat-toolbar>
 
   <div class="content">
     <router-outlet></router-outlet>
   </div>
 
-  <mat-toolbar color="primary" class="footer">
-    <span>© 2024 User List App</span>
+  <mat-toolbar color="accent" class="footer">
+    <span>© 2024 UserListApp</span>
   </mat-toolbar>
 </div>
-
