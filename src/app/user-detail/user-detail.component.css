@@ -1,0 +1,50 @@
+.user-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+}
+
+.mat-spinner {
+    margin: auto;
+}
+
+
+.user-detail {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.user-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    margin: 5px 0;
+}
+
+mat-toolbar {
+    /* justify-content: space-between; */
+    align-items: center;
+    display: flex;
+}

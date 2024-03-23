@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  User Details
+</mat-toolbar>
+
+<div class="user-detail-container">
+  <div *ngIf="user; else loading" class="user-detail">
+    <img class="user-avatar" [src]="user.avatar" alt="Photo of {{ user.first_name }}">
+    <div class="user-info">
+      <p><strong>ID:</strong> {{ user.id }}</p>
+      <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</div>

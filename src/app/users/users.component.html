@@ -1,0 +1,24 @@
+<mat-toolbar>
+  User List App
+  <span class="spacer"></span>
+  <input matInput [formControl]="searchControl" placeholder="Search by ID" class="search-input">
+</mat-toolbar>
+
+<div *ngIf="userFound; else userNotFound" class="user-list">
+  <mat-card *ngFor="let user of users" (click)="gotoDetails(user.id)">
+    <img mat-card-image [src]="user.avatar" alt="Photo of {{ user.first_name }}">
+    <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+  </mat-card>
+</div>
+
+
+<ng-template #userNotFound>
+  <div class="user-not-found">
+    <h2>User not found</h2>
+  </div>
+</ng-template>
+
+
+
+<mat-paginator [length]="totalUsers" [pageSize]="pageSize" (page)="changePage($event)">
+</mat-paginator>
